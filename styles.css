@@ -1,0 +1,31 @@
+/* App-level layout overrides and player controls. */
+/* Keep the section chooser as a full-page landing screen, not a dialog card. */
+.portal {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Player selectors sit together and can wrap on narrow phone screens. */
+.choices {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.choice-dd {
+  min-width: 112px;
+}
+
+@media (max-width: 420px) {
+  .choices {
+    gap: 8px;
+  }
+
+  .choice-dd,
+  .choice-trigger {
+    min-width: 100px;
+  }
+}
